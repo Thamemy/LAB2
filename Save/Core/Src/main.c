@@ -135,10 +135,10 @@ int main(void)
 	  		  }
 	  		  Sum1 = Temp /10 ;
 	  		  Sum2 = Adc / 10 ;
-	  		  Analog = (Sum2 * 3.3)/4096; // Convert Analog // 4096 = 2^12
+	  		  Analog = (Sum2 * 3.3)/4096; // Change ADC to Voltage  // 4096 = 2^12
 	  		  FinalAnalog = (Analog *2)*1000;
-	  		  Vsense = (Sum1 * 3.3)/4096;
-	  		  FinalTemp = ((Vsense-0.76)/2.5)+25; // ChangeTemp
+	  		  Vsense = (Sum1 * 3.3)/4096; // Change ADC to Voltage
+	  		  FinalTemp = (((Vsense-0.76)/2.5)+25)+274.15; // ChangeTemp C to k
 
 	  	  }
 
